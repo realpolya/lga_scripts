@@ -10,10 +10,11 @@ Image.MAX_IMAGE_PIXELS = None
 Run like this:
 python build_csv.py "/absolute/path/to/png_folder" "/absolute/path/to/contour_folder"
 
-py build_csv.py "../../Silhouettes/Kaplan Modified/Kaplan Silhouettes/3D Silhouettes" "../../Silhouettes/Kaplan Modified/Kaplan Contours"
+py build_csv.py "../../Silhouettes/Kaplan Modified/Kaplan Silhouettes/3D Silhouettes" 
+"../../Silhouettes/Kaplan Modified/Kaplan Contours"
 '''
 
-OUTPUT_CSV = "build_rhino.csv"
+OUTPUT_CSV = "build_offit.csv"
 
 FIELDNAMES = [
     "name",
