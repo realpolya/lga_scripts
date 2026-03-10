@@ -21,8 +21,10 @@ from pathlib import Path
 
 import numpy as np
 from PIL import Image
+
 from skimage import measure
 
+Image.MAX_IMAGE_PIXELS = None
 
 def rdp(points: np.ndarray, epsilon: float) -> np.ndarray:
     """Ramer–Douglas–Peucker simplification for Nx2 points."""
@@ -67,14 +69,41 @@ def estimate_bg(rgb: np.ndarray) -> np.ndarray:
     return np.median(border, axis=0)
 
 
+# def make_mask(img: Image.Image) -> np.ndarray:
+#     """
+#     True = foreground.
+#     Prefer alpha if available; otherwise detect background via border color distance.
+#     """
+#     if img.mode in ("RGBA", "LA"):
+#         arr = np.array(img)
+#         alpha = arr[:, :, 3].astype(np.uint8)
+#         return alpha > 10  # treat near-transparent as background
+
+#     rgb = np.array(img.convert("RGB")).astype(np.int16)
+#     bg = estimate_bg(rgb)
+#     diff = np.sqrt(np.sum((rgb - bg) ** 2, axis=2))
+
+#     h, w = diff.shape
+#     border_diff = np.concatenate(
+#         [
+#             diff[0:2, :].ravel(),
+#             diff[h - 2 : h, :].ravel(),
+#             diff[:, 0:2].ravel(),
+#             diff[:, w - 2 : w].ravel(),
+#         ]
+#     )
+
+#     thr = float(np.percentile(border_diff, 99)) + 5.0
+#     thr = max(thr, 15.0)
+#     return diff > thr
+
 def make_mask(img: Image.Image) -> np.ndarray:
     """
     True = foreground.
     Prefer alpha if available; otherwise detect background via border color distance.
     """
-    if img.mode in ("RGBA", "LA"):
-        arr = np.array(img)
-        alpha = arr[:, :, 3].astype(np.uint8)
+    if "A" in img.getbands():
+        alpha = np.array(img.getchannel("A")).astype(np.uint8)
         return alpha > 10  # treat near-transparent as background
 
     rgb = np.array(img.convert("RGB")).astype(np.int16)
