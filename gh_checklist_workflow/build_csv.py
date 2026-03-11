@@ -14,7 +14,7 @@ py build_csv.py "../../Silhouettes/Kaplan Modified/Kaplan Silhouettes/3D Silhoue
 "../../Silhouettes/Kaplan Modified/Kaplan Contours"
 '''
 
-OUTPUT_CSV = "build_offit.csv"
+OUTPUT_CSV = "build_hurst.csv"
 
 FIELDNAMES = [
     "name",
@@ -145,8 +145,8 @@ def build_row(png_path: str, contour_dir: str) -> dict:
         "layer_final_geom": f"{base_layer}::Final_Geom",
         "layer_derived_curves": f"{base_layer}::Face_Curves",
         "layer_original_curves": f"{base_layer}::Original_Curve",
-        "layer_scaled_curve": f"{base_layer}::Scaled_Curve",
-        "layer_curve_bbox": f"{base_layer}::Curve_Bbox",
+        "layer_scaled_curve": f"AutoCAD::{base_layer}::Scaled_Curve",
+        "layer_curve_bbox": f"AutoCAD::{base_layer}::Curve_Bbox",
         "layer_images": f"{base_layer}::Images",
         "picture_path": os.path.abspath(png_path),
         "img_w": png_data["img_w"],
