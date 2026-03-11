@@ -14,7 +14,11 @@ py build_csv.py "../../Silhouettes/Kaplan Modified/Kaplan Silhouettes/3D Silhoue
 "../../Silhouettes/Kaplan Modified/Kaplan Contours"
 '''
 
-OUTPUT_CSV = "build_hurst.csv"
+# OUTPUT_CSV = "build_hurst.csv"
+# OUTPUT_CSV = "build_kaplan.csv"
+# OUTPUT_CSV = "build_bloomberg.csv"
+# OUTPUT_CSV = "build_heller.csv"
+OUTPUT_CSV = "build_offit.csv"
 
 FIELDNAMES = [
     "name",
