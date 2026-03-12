@@ -12,6 +12,24 @@ python build_csv.py "/absolute/path/to/png_folder" "/absolute/path/to/contour_fo
 
 py build_csv.py "../../Silhouettes/Kaplan Modified/Kaplan Silhouettes/3D Silhouettes" 
 "../../Silhouettes/Kaplan Modified/Kaplan Contours"
+
+py build_csv.py 
+"../../Silhouettes/Bloomberg Modified/Bloomberg SIlhouettes/Combined" 
+"../../Silhouettes/Bloomberg Modified/Bloomberg Contours"
+
+py build_csv.py 
+"../../Silhouettes/Hurst Modified/Hurst Silhouettes/Combined" 
+"../../Silhouettes/Hurst Modified/Hurst Contours"
+
+py build_csv.py 
+"../../Silhouettes/Heller Modified/Heller Silhouettes/Combined" 
+"../../Silhouettes/Heller Modified/Heller Contours"
+
+py build_csv.py 
+"../../Silhouettes/Offit Modified/Offit Silhouettes/Combined" 
+"../../Silhouettes/Offit Modified/Offit Contours"
+
+
 '''
 
 # OUTPUT_CSV = "build_hurst.csv"
