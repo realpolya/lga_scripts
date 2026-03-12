@@ -17,8 +17,8 @@ py build_csv.py "../../Silhouettes/Kaplan Modified/Kaplan Silhouettes/3D Silhoue
 # OUTPUT_CSV = "build_hurst.csv"
 # OUTPUT_CSV = "build_kaplan.csv"
 # OUTPUT_CSV = "build_bloomberg.csv"
-# OUTPUT_CSV = "build_heller.csv"
-OUTPUT_CSV = "build_offit.csv"
+OUTPUT_CSV = "build_heller.csv"
+# OUTPUT_CSV = "build_offit.csv"
 
 FIELDNAMES = [
     "name",
@@ -50,12 +50,23 @@ VALID_EXTENSIONS = {".png"}
 ALPHA_THRESHOLD = 10
 
 
+# def extract_item_number(filename: str) -> str:
+#     """
+#     18_silhouette.png -> 18
+#     """
+#     stem = os.path.splitext(filename)[0]
+#     match = re.match(r"^(\d+)_silhouette$", stem, re.IGNORECASE)
+#     if match:
+#         return match.group(1)
+#     return stem
+
 def extract_item_number(filename: str) -> str:
     """
     18_silhouette.png -> 18
+    178a_silhouette.png -> 178a
     """
     stem = os.path.splitext(filename)[0]
-    match = re.match(r"^(\d+)_silhouette$", stem, re.IGNORECASE)
+    match = re.match(r"^(\d+[A-Za-z]?)_silhouette$", stem, re.IGNORECASE)
     if match:
         return match.group(1)
     return stem
