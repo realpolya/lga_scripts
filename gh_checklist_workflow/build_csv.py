@@ -13,30 +13,27 @@ python build_csv.py "/absolute/path/to/png_folder" "/absolute/path/to/contour_fo
 py build_csv.py "../../Silhouettes/Kaplan Modified/Kaplan Silhouettes/3D Silhouettes" 
 "../../Silhouettes/Kaplan Modified/Kaplan Contours"
 
-py build_csv.py 
-"../../Silhouettes/Bloomberg Modified/Bloomberg SIlhouettes/Combined" 
-"../../Silhouettes/Bloomberg Modified/Bloomberg Contours"
+py build_csv.py "../../Silhouettes/Bloomberg Modified/Bloomberg SIlhouettes/Combined" "../../Silhouettes/Bloomberg Modified/Bloomberg Contours"
 
-py build_csv.py 
-"../../Silhouettes/Hurst Modified/Hurst Silhouettes/Combined" 
-"../../Silhouettes/Hurst Modified/Hurst Contours"
+py build_csv.py "../../Silhouettes/Hurst Modified/Hurst Silhouettes/Combined" "../../Silhouettes/Hurst Modified/Hurst Contours"
 
-py build_csv.py 
-"../../Silhouettes/Heller Modified/Heller Silhouettes/Combined" 
-"../../Silhouettes/Heller Modified/Heller Contours"
+py build_csv.py "../../Silhouettes/Heller Modified/Heller Silhouettes/Combined" "../../Silhouettes/Heller Modified/Heller Contours"
 
-py build_csv.py 
-"../../Silhouettes/Offit Modified/Offit Silhouettes/Combined" 
-"../../Silhouettes/Offit Modified/Offit Contours"
+py build_csv.py "../../Silhouettes/Offit Modified/Offit Silhouettes/Combined" "../../Silhouettes/Offit Modified/Offit Contours"
 
 
 '''
 
-# OUTPUT_CSV = "build_hurst.csv"
 # OUTPUT_CSV = "build_kaplan.csv"
+# OUTPUT_CSV = "build_hurst.csv"
 # OUTPUT_CSV = "build_bloomberg.csv"
-OUTPUT_CSV = "build_heller.csv"
+# OUTPUT_CSV = "build_heller.csv"
 # OUTPUT_CSV = "build_offit.csv"
+
+# OUTPUT_CSV = "build_hurst_2d.csv"
+# OUTPUT_CSV = "build_bloomberg_2d.csv"
+# OUTPUT_CSV = "build_heller_2d.csv"
+OUTPUT_CSV = "build_offit_2d.csv"
 
 FIELDNAMES = [
     "name",
@@ -45,6 +42,7 @@ FIELDNAMES = [
     "w",
     "h",
     "d",
+    "criss_cross",
     "layer_final_geom",
     "layer_derived_curves",
     "layer_original_curves",
