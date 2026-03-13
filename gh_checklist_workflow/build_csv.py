@@ -10,12 +10,13 @@ Image.MAX_IMAGE_PIXELS = None
 Run like this:
 python build_csv.py "/absolute/path/to/png_folder" "/absolute/path/to/contour_folder"
 
-py build_csv.py "../../Silhouettes/Kaplan Modified/Kaplan Silhouettes/3D Silhouettes" 
-"../../Silhouettes/Kaplan Modified/Kaplan Contours"
-
-py build_csv.py "../../Silhouettes/Bloomberg Modified/Bloomberg SIlhouettes/Combined" "../../Silhouettes/Bloomberg Modified/Bloomberg Contours"
+py build_csv.py "../../Silhouettes/Kaplan Modified/Kaplan Silhouettes/3D Silhouettes" "../../Silhouettes/Kaplan Modified/Kaplan Contours"
+py build_csv.py "../../Silhouettes/Kaplan Modified/Kaplan Silhouettes/Combined" "../../Silhouettes/Kaplan Modified/Kaplan Contours"
 
 py build_csv.py "../../Silhouettes/Hurst Modified/Hurst Silhouettes/Combined" "../../Silhouettes/Hurst Modified/Hurst Contours"
+
+py build_csv.py "../../Silhouettes/Bloomberg Modified/Bloomberg Silhouettes/Combined" "../../Silhouettes/Bloomberg Modified/Bloomberg Contours"
+
 
 py build_csv.py "../../Silhouettes/Heller Modified/Heller Silhouettes/Combined" "../../Silhouettes/Heller Modified/Heller Contours"
 
@@ -27,16 +28,20 @@ py build_csv.py "../../Silhouettes/Offit Modified/Offit Silhouettes/Combined" ".
 # OUTPUT_CSV = "build_kaplan.csv"
 # OUTPUT_CSV = "build_hurst.csv"
 # OUTPUT_CSV = "build_bloomberg.csv"
-# OUTPUT_CSV = "build_heller.csv"
+OUTPUT_CSV = "build_heller.csv"
 # OUTPUT_CSV = "build_offit.csv"
 
+
+# OUTPUT_CSV = "build_kaplan_2d.csv"
 # OUTPUT_CSV = "build_hurst_2d.csv"
 # OUTPUT_CSV = "build_bloomberg_2d.csv"
 # OUTPUT_CSV = "build_heller_2d.csv"
-OUTPUT_CSV = "build_offit_2d.csv"
+# OUTPUT_CSV = "build_offit_2d.csv"
 
 FIELDNAMES = [
     "name",
+    "sort_num",
+    "sort_letter",
     "contour_path",
     "units",
     "w",

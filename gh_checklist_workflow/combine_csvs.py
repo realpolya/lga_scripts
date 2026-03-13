@@ -5,8 +5,9 @@ import sys
 # DOMINANT_FILE = "./combine_sheets/build_heller.csv"
 # DOMINANT_FILE = "./combine_sheets/build_bloomberg.csv"
 # DOMINANT_FILE = "./combine_sheets/build_hurst.csv"
-DOMINANT_FILE = "./combine_sheets/build_offit.csv"
-OUTPUT_CSV = "offit_combined.csv"
+# DOMINANT_FILE = "./combine_sheets/build_offit.csv"
+DOMINANT_FILE = "./extra/combine_sheets/build_kaplan.csv"
+OUTPUT_CSV = "kaplan_combined.csv"
 # OUTPUT_CSV = "hurst_combined.csv"
 # OUTPUT_CSV = "bloomberg_combined.csv"
 
