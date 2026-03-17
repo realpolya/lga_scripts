@@ -28,7 +28,7 @@ py build_csv.py "../../Silhouettes/Offit Modified/Offit Silhouettes/Combined" ".
 # OUTPUT_CSV = "build_kaplan.csv"
 # OUTPUT_CSV = "build_hurst.csv"
 # OUTPUT_CSV = "build_bloomberg.csv"
-OUTPUT_CSV = "build_heller.csv"
+# OUTPUT_CSV = "build_heller.csv"
 # OUTPUT_CSV = "build_offit.csv"
 
 
@@ -37,6 +37,11 @@ OUTPUT_CSV = "build_heller.csv"
 # OUTPUT_CSV = "build_bloomberg_2d.csv"
 # OUTPUT_CSV = "build_heller_2d.csv"
 # OUTPUT_CSV = "build_offit_2d.csv"
+
+OUTPUT_CSV = "build_kaplan_extra.csv"
+# OUTPUT_CSV = "build_hurst_extra.csv"
+
+
 
 FIELDNAMES = [
     "name",
