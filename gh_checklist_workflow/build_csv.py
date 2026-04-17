@@ -26,8 +26,8 @@ py build_csv.py "../../Silhouettes/Offit Modified/Offit Silhouettes/Combined" ".
 '''
 
 # OUTPUT_CSV = "build_kaplan.csv"
-OUTPUT_CSV = "build_kaplan_april.csv"
-# OUTPUT_CSV = "build_hurst.csv"
+# OUTPUT_CSV = "build_kaplan_april.csv"
+OUTPUT_CSV = "build_hurst_april.csv"
 # OUTPUT_CSV = "build_bloomberg.csv"
 # OUTPUT_CSV = "build_heller.csv"
 # OUTPUT_CSV = "build_offit_april.csv"
