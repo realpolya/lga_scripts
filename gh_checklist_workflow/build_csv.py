@@ -10,7 +10,6 @@ Image.MAX_IMAGE_PIXELS = None
 Run like this:
 python build_csv.py "/absolute/path/to/png_folder" "/absolute/path/to/contour_folder"
 
-py build_csv.py "../../Silhouettes/Kaplan Modified/Kaplan Silhouettes/3D Silhouettes" "../../Silhouettes/Kaplan Modified/Kaplan Contours"
 py build_csv.py "../../Silhouettes/Kaplan Modified/Kaplan Silhouettes/Combined" "../../Silhouettes/Kaplan Modified/Kaplan Contours"
 
 py build_csv.py "../../Silhouettes/Hurst Modified/Hurst Silhouettes/Combined" "../../Silhouettes/Hurst Modified/Hurst Contours"
@@ -27,8 +26,8 @@ py build_csv.py "../../Silhouettes/Offit Modified/Offit Silhouettes/Combined" ".
 
 # OUTPUT_CSV = "build_kaplan.csv"
 # OUTPUT_CSV = "build_kaplan_april.csv"
-OUTPUT_CSV = "build_hurst_april.csv"
-# OUTPUT_CSV = "build_bloomberg.csv"
+# OUTPUT_CSV = "build_hurst_april.csv"
+OUTPUT_CSV = "build_bloomberg_april.csv"
 # OUTPUT_CSV = "build_heller.csv"
 # OUTPUT_CSV = "build_offit_april.csv"
 
